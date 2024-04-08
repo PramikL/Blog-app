@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 1</title>
+</head>
+<body>
+    <div>
+        {% block content %}
+<div class="post-entry">
+    <p> Title = {{blog.title}}</p>
+<p> Author = {{blog.author}}</p>
+<p>{{ blog.body }}</p>
+</div>
+{% endblock content %}
+
+    </div>
+    <footer>
+        <a href="{% url 'home' %}">Return</a>
+    </footer>
+</body>
+</html>
